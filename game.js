@@ -17,9 +17,11 @@ class Game {
             output: process.stdout,
         });
         askQuestion();
+
         function askQuestion() {
             rl.question('Your choice: ', handleUserInput);
         }
+
         function handleUserInput(input) {
             let userChoice = input;
             switch (userChoice) {
@@ -52,6 +54,7 @@ class Game {
             }
         }
     }
+
     static startGame() {
         const args = process.argv;
         if (!MenuUtils.validateArguments(args)) {
@@ -61,4 +64,5 @@ class Game {
         Game.playGame(moves);
     }
 }
+
 Game.startGame();

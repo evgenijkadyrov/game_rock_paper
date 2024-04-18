@@ -14,9 +14,11 @@ class MenuUtils {
         }
         return true;
     }
+
     static getMovesFromArguments(args) {
         return args.slice(2);
     }
+
     static showMenu(moves) {
         console.log('\x1b[36mSelect your move:\x1b[0m');
         moves.forEach((move, index) => {
@@ -26,4 +28,5 @@ class MenuUtils {
         console.log('? - \x1b[34mHelp:\x1b[0m');
     }
 }
+
 module.exports = MenuUtils

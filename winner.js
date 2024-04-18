@@ -16,4 +16,5 @@ class Winner {
         }
     }
 }
-module.exports=Winner
+
+module.exports = Winner
