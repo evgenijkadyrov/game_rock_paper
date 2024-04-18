@@ -1,8 +1,15 @@
 class MenuUtils {
     static validateArguments(args) {
         if (!args || args.length < 4 || args.length % 2 === 0) {
-            console.error('Invalid arguments! Please provide an odd number of unique moves.');
+            console.error(
+                'Invalid arguments! Please provide an odd number of unique moves.'
+            );
             console.error('Example usage: node game.js Rock Paper Scissors');
+            return false;
+        }
+        const uniqueMoves = new Set(args.slice(2));
+        if (uniqueMoves.size !== args.slice(2).length) {
+            console.error('Invalid arguments! The moves should be unique.');
             return false;
         }
         return true;
